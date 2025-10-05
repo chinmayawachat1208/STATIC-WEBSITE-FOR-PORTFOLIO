@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add these styles for the bubble canvas */
+        #bubbleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Add Canvas for Bubbles (RIGHT AFTER <body> tag) -->
+    <canvas id="bubbleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">MY PORTFOLIO</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Web Devloper </h1>
+            <p>Aspiring Software Devloper | Android Enthusits 
+                I love building creative mobail apps and web solutions that make life easier.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+          
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text fade-in">
+            <p>I am a passionate BCA student with a strong interest in web development and App development. 
+                I enjoy building creative and user-friendly applications using technologies like HTML, CSS, JavaScript, Java, Kotlin and python . 
+                I am constantly learning new tools and frameworks to improve my skills and stay updated with the latest trends in technology. 
+                My goal is to grow as a developer by working on real-world projects and contributing to innovative solutions.</p>            </div>
+            <div class="about-image fade-in">💻</div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🌐</div>
+                <h3>Technical skill</h3>
+                <p>HTML5, CSS3, JavaScript, Java, Kotlin, Android Development, SQLite Database, Git & GitHub</p>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🎨</div>
+                <h3>Additional Skills</h3>
+                <p>Problem Solving, Team Collaboration, Communication Skills</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-image">🎙</div>
+                <div class="project-content">
+                    <h3>Rudi AI Assistant</h3>
+                    <p>A JARVIS-like AI assistant built in Kotlin that responds to wake words and executes voice commands such as opening apps</p>
+                    <div class="project-tags">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">XML UI/UX </span>
+                        <span class="tag">Wake word </span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-image">💵</div>
+                <div class="project-content">
+                    <h3>Expense Tracker App</h3>
+                    <p>A simple Android application to manage daily expenses with add, delete, and view transaction features using SQLite database</p>
+                    <div class="project-tags">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">java</span>
+                        <span class="tag">transaction activity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-image">🐤</div>
+                <div class="project-content">
+                    <h3>Tappy Bird Game</h3>
+                    <p>A fun Flappy Bird-style Android game with score tracking, collision detection, and restart option.</p>
+                    <div class="project-tags">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">score tracking</span>
+                        <span class="tag">collision detection</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-image">📝</div>
+                <div class="project-content">
+                    <h3>CrewAI</h3>
+                    <p>An AI-powered team collaboration assistant designed to improve productivity during hackathons and projects</p>
+                    <div class="project-tags">
+                        <span class="tag">python</span>
+                        <span class="tag">agents</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/chinmayawachat1208" target="_blank" title="GitHub">🐱‍🚀</a>
+            <a href="https://www.linkedin.com/in/chinmay-awachat-5081a226b/" target="_blank" title="LinkedIn">💼</a>
+            <a href="chinmayawachat1000@gmail.com" target="_blank" title="Email">📧</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Bubble Animation Script (ADD BEFORE </body> tag) -->
+    <script>
+        class Bubble {
+            constructor(x, y, radius, color, speed) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.color = color;
+                this.speed = speed;
+                this.opacity = Math.random() * 0.5 + 0.3;
+            }
+
+            update(canvasHeight, canvasWidth) {
+                this.y -= this.speed;
+                this.x += Math.sin(this.y / 100) * 2;
+
+                if (this.y + this.radius < 0) {
+                    this.y = canvasHeight + this.radius;
+                    this.x = Math.random() * canvasWidth;
+                }
+            }
+
+            draw(ctx) {
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        class BubbleAnimation {
+            constructor() {
+                this.canvas = document.getElementById('bubbleCanvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.bubbles = [];
+                this.colors = [
+                    '#9b59b6',
+                    '#3498db',
+                    '#e91e63',
+                    '#2ecc71',
+                    '#f39c12'
+                ];
+
+                this.resizeCanvas();
+                this.createBubbles();
+                this.animate();
+
+                window.addEventListener('resize', () => this.resizeCanvas());
+            }
+
+            resizeCanvas() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+
+            createBubbles() {
+                for (let i = 0; i < 15; i++) {
+                    const x = Math.random() * this.canvas.width;
+                    const y = Math.random() * this.canvas.height;
+                    const radius = Math.random() * 60 + 40;
+                    const color = this.colors[Math.floor(Math.random() * this.colors.length)];
+                    const speed = Math.random() * 2 + 0.5;
+
+                    this.bubbles.push(new Bubble(x, y, radius, color, speed));
+                }
+            }
+
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+                this.bubbles.forEach(bubble => {
+                    bubble.update(this.canvas.height, this.canvas.width);
+                    bubble.draw(this.ctx);
+                });
+
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        window.addEventListener('load', () => {
+            new BubbleAnimation();
+        });
+    </script>
+</body>
+</html>
