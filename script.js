@@ -12,7 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile menu toggle
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
     menu.classList.toggle('active');
@@ -23,7 +22,6 @@ function closeMenu() {
     menu.classList.remove('active');
 }
 
-// Intersection Observer for fade-in animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -41,7 +39,6 @@ document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
 
-// Form submission handler
 function handleSubmit(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
@@ -55,7 +52,6 @@ function handleSubmit(event) {
     }
 }
 
-// Add active state to navigation on scroll
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
